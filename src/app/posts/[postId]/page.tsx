@@ -57,14 +57,14 @@ export default async function BlogPostPage({
   await delay(1000);
 
   return (
-    <article className="max-w-5xl m-auto space-y-5">
+    <article className="max-w-4xl m-auto space-y-5">
       <div className="min-h-screen font-sans">
         <Link href="/posts">
           <div className="flex items-center ml-32 py-5 text-blue-500">
             <ArrowLeft /> Posts
           </div>
         </Link>
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="bg-teal-500 text-white p-6 flex items-center ">
             <Image
               src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqh8ujtwuyr3wbxegw5ai.webp"

@@ -17,24 +17,27 @@ export default function Header() {
           <span className="text-xl font-bold">SEO</span>
         </Link>
 
-        <nav className="hidden md:flex gap-6 items-center" style={{marginLeft: '-8rem'}}>
-          <Link href="/" className="hover:text-blue-600 font-medium">Home</Link>
-          <Link href="/posts" className="hover:text-blue-600 font-medium">Posts</Link>
-          <Link href="/about" className="hover:text-blue-600 font-medium">About</Link>
-          <Link href="/privacy" className="hover:text-blue-600 font-medium">Privacy</Link>
+        <nav className="hidden md:flex gap-6 items-center" style={{ marginLeft: '-8rem' }}>
+          <Link href="/" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Home</Link>
+          <Link href="/posts" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Posts</Link>
+          <Link href="/about" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">About</Link>
+          <Link href="/privacy" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Privacy</Link>
         </nav>
 
-        <div className="hidden md:flex">
-        <Link href="/">
-          <Image
+        <div className="hidden md:flex hover:text-green-700">
+          <Link href="/">
+            {/* <Image
             src="https://i.imgur.com/FNP4R0K.png"
             alt="Profile"
             width={36}
             height={36}
             className="rounded-full"
-            />
-        </Link>
+            /> */}
+            <div className="rounded-full bg-gray-300 w-10 h-10 flex justify-center items-center overflow-hidden">
+              <span className="text-lg">👩‍💻</span>
             </div>
+          </Link>
+        </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -46,17 +49,21 @@ export default function Header() {
           }`}
       >
         <nav className="flex flex-col gap-4 py-4">
-          <Link href="/" className="hover:text-blue-600 font-medium">Home</Link>
-          <Link href="/about" className="hover:text-blue-600 font-medium">About</Link>
-          <Link href="/privacy" className="hover:text-blue-600 font-medium">Privacy</Link>
-          <Link href="/" className="flex items-center gap-2">
-            <Image
+          <Link href="/" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Home</Link>
+          <Link href="/posts" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Posts</Link>
+          <Link href="/about" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">About</Link>
+          <Link href="/privacy" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Privacy</Link>
+          <Link href="/" className="flex items-center gap-2 hover:text-green-700">
+            {/* <Image
               src="https://i.imgur.com/FNP4R0K.png"
               alt="Profile"
               width={30}
               height={30}
               className="rounded-full"
-            />
+            /> */}
+            <div className="rounded-full bg-gray-300 w-10 h-10 flex justify-center items-center overflow-hidden">
+              <span className="text-lg">👩‍💻</span>
+            </div>
             <span className="font-medium">Profile</span>
           </Link>
         </nav>
