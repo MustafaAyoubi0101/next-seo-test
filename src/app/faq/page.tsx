@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl m-auto space-y-3 bg-white p-14 rounded-lg">
       <h1 className="text-3xl font-bold">Frequently Asked Questions (FAQ)</h1>
-      <p>Welcome to our FAQ section! Here, you'll find quick answers to the most common questions
+      <p>Welcome to our FAQ section! Here, you&apos;ll find quick answers to the most common questions
         about our services, support, and more.</p>
       <div>
         <h2 className="font-bold text-lg">What is this website about?</h2>
@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <div>
         <h2 className="font-bold text-lg">How often is the content updated?</h2>
-        <p>We update our content regularly to ensure that you're always getting the most accurate and useful information.</p>
+        <p>We update our content regularly to ensure that you&apos;re always getting the most accurate and useful information.</p>
       </div>
 
       <div>
