@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Article({ id, title, tags, views }: BlogPost) {
     return (
-        <article className="max-w-4xl mx-auto bg-white mt-3 p-6 mt-0 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+        <article className="max-w-4xl mx-auto bg-white mt-3 p-6 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
             <div className="flex items-center mb-2">
                 <div className="rounded-full bg-gray-300 w-10 h-10 flex justify-center items-center overflow-hidden">
                     <span className="text-lg">👩‍💻</span>
