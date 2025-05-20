@@ -10,7 +10,7 @@ export default async function BlogPage() {
     await delay(1000);
 
     return (
-        <div className="m-auto space-y-5">
+        <div className="m-auto space-y-3">
             <h1 className="text-3xl text-center mb-3 font-bold">Posts</h1>
             {posts.map(({ id, title, tags, views }, i) => (
                 <Article key={i} id={id} title={title} tags={tags} views={views} body=""/>

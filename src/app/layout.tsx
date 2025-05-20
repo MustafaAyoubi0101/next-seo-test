@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "My Blog",
-    template: "%s - My Blog",
+    default: "DevScope",
+    template: "%s - DevScope",
   },
   description: "Come and read my articles!",
   twitter: {
@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div style={{ background: '#eff7ef' }}>
+        <div className="bg-[#f5f3ff]">
           <main className="p-5 container mx-auto">{children}</main>
         </div>
         <Footer />

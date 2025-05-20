@@ -1,5 +1,5 @@
 'use client';
-import logo from "@/assets/logo1.jpg";
+import blogLogo from "@/assets/blog-logo.png";
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,18 +13,19 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
 
         <Link href="/" className="flex items-center gap-2">
-          <Image src={logo} alt="Logo" width={40} height={40} />
-          <span className="text-xl font-bold">SEO</span>
+          <Image src={blogLogo} alt="blog" width={70} height={40} className="rounded-md" />
+          <span className="text-xl font-bold">DevScope</span>
         </Link>
 
-        <nav className="hidden md:flex gap-6 items-center" style={{ marginLeft: '-8rem' }}>
-          <Link href="/" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Home</Link>
-          <Link href="/posts" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Posts</Link>
-          <Link href="/about" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">About</Link>
-          <Link href="/privacy" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Privacy</Link>
+        <nav className="hidden md:flex gap-6 items-center -ml-[144px]">
+          <Link href="/" className="hover:text-violet-800 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Home</Link>
+          <Link href="/contact" className="hover:text-violet-800 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Contact</Link>
+          <Link href="/faq" className="hover:text-violet-800 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">FAQ</Link>
+          <Link href="/about" className="hover:text-violet-800 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">About</Link>
+          <Link href="/privacy" className="hover:text-violet-800 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Privacy</Link>
         </nav>
 
-        <div className="hidden md:flex hover:text-green-700">
+        <div className="hidden md:flex hover:text-violet-800">
           <Link href="/">
             {/* <Image
             src="https://i.imgur.com/FNP4R0K.png"
@@ -50,7 +51,8 @@ export default function Header() {
       >
         <nav className="flex flex-col gap-4 py-4">
           <Link href="/" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Home</Link>
-          <Link href="/posts" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Posts</Link>
+          <Link href="/contact" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Contact</Link>
+          <Link href="/faq" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">FAQ</Link>
           <Link href="/about" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">About</Link>
           <Link href="/privacy" className="hover:text-green-700 font-medium transition-colors hover:bg-slate-100 p-2 rounded-lg">Privacy</Link>
           <Link href="/" className="flex items-center gap-2 hover:text-green-700">

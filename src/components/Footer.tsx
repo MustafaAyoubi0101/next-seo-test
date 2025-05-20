@@ -12,7 +12,7 @@ export default function Footer() {
         </Link>
       </div>
       <div>
-        &copy; {new Date().getFullYear()} SEO. Designed and Developed By Mustafa Ayoubi.
+        &copy; {new Date().getFullYear()} DevScope. Designed and Developed By Mustafa Ayoubi.
       </div>
     </footer>
   );

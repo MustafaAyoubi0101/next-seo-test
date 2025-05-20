@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-4xl m-auto space-y-3 bg-white p-6 rounded-lg">
+    <div className="max-w-4xl m-auto space-y-3 bg-white p-14 rounded-lg">
       <h1 className="text-3xl text-center font-bold">Privacy Policy</h1>
       <em>Last Updated: September 01, 2025</em>
 
