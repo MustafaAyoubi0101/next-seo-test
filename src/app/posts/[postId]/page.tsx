@@ -1,4 +1,3 @@
-import ClapButton from "@/components/ClapButton";
 import { delay } from "@/lib/utils";
 import { BlogPost, BlogPostsResponse } from "@/models/BlogPost";
 import { ArrowLeft } from "lucide-react";
@@ -6,7 +5,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { cache } from "react";
 
 interface BlogPostPageProps {
   params: { postId: string };
@@ -19,12 +17,6 @@ export async function generateStaticParams() {
   return posts.map(({ id }) => id);
 }
 
-// Manually deduplicate requests if not using fetch
-// const getPost = cache(async (postId: string) => {
-//   const post = await prisma.post.findUnique(postId);
-//   return post;
-// })
-
 export async function generateMetadata({
   params: { postId },
 }: BlogPostPageProps): Promise<Metadata> {
@@ -34,13 +26,6 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.body,
-    // openGraph: {
-    //   images: [
-    //     {
-    //       url: post.imageUrl
-    //     }
-    //   ]
-    // }
   };
 }
 

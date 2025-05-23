@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import aboutLogo from '@/assets/technology-communication-icons-symbols-concept.jpg'
 import Image from "next/image";
+
 export const metadata: Metadata = {
   title: "About",
 };
