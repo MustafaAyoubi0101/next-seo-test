@@ -15,7 +15,7 @@ export default async function BlogPage() {
           <Sidebar />
         </aside>
         <div className="flex-1 p-1 max-w-3xl mx-3">
-          <QuickiePost />
+          {/* <QuickiePost /> */}
           <DevWelcomeCard />
           {posts.map(({ id, title, tags, views }, i) => (
             <Article key={i} id={id} title={title} tags={tags} views={views} body="" />
