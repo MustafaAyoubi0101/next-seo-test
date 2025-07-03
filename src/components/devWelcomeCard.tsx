@@ -7,7 +7,7 @@ export default function DevWelcomeCard() {
         <div className="bg-black p-4 rounded">
           <span className="text-white text-xl font-bold">DevScope</span>
         </div>
-        <h1 className="text-3xl font-extrabold ml-4">You&apos;re now a part of the community!</h1>
+        <h1 className="text-xl lg:text-3xl font-extrabold ml-4">You&apos;re now a part of the community!</h1>
       </div>
 
       <p className="text-sm uppercase mb-6 text-white/80">Suggested things you can do</p>
