@@ -17,7 +17,7 @@ interface ChallengeCardProps {
 }
 
 const ChallengeCard: React.FC<ChallengeCardProps> = ({ headerTitle, headerEmoji, items, footer }) => (
-  <div className="bg-white rounded-xl shadow border p-3 max-w-md mx-auto mb-3">
+  <div className="bg-white rounded-xl shadow border p-3 max-w-md mx-auto mb-3 hidden lg:block">
     <div className="flex items-center gap-2 mb-2 text-gray-700 text-sm font-semibold">
       <span>{headerEmoji}</span>
       <span>{headerTitle}</span>
