@@ -1,22 +1,25 @@
+import React from "react";
 import { ReactNode } from "react";
-import { BookOpen, Code, Eye, FileQuestion, FunctionSquareIcon, Home, Library, MessageCircleDashed, MessageSquare, MessageSquareShare, Microchip, PaintRollerIcon, PanelRightInactive, Phone, Podcast, ShoppingBag, Tags, Video } from "lucide-react";
+import { BookOpen, FileQuestion, Library, MessageSquare, Phone, Podcast, Video } from "lucide-react";
+import Link from "next/link";
 
 type NavItem = {
   icon: ReactNode;
   label: string;
+  url: string;
 };
 
 const mainLinks: NavItem[] = [
-  { icon: <MessageSquare />, label: "Posts" },
-  { icon: <Podcast />, label: "Podcasts" },
-  { icon: <BookOpen />, label: "Reading List" },
-  { icon: <Video />, label: "Videos" }
+  { icon: <MessageSquare />, label: "Posts", url: "/posts" },
+  { icon: <Podcast />, label: "Podcasts", url: "/podcasts" },
+  { icon: <BookOpen />, label: "Reading List", url: "/reading-list" },
+  { icon: <Video />, label: "Videos", url: "/videos" }
 ];
 
 const otherLinks: NavItem[] = [
-  { icon: <Library />, label: "Privacy Policy" },
-  { icon: <Phone />, label: "Contact" },
-  { icon: <FileQuestion />, label: "FAQ" }
+  { icon: <Library />, label: "Privacy Policy", url: "/privacy" },
+  { icon: <Phone />, label: "Contact", url: "/contact" },
+  { icon: <FileQuestion />, label: "FAQ", url: "/faq" }
 ];
 
 export default function Sidebar() {
@@ -25,13 +28,12 @@ export default function Sidebar() {
       <nav className="space-y-6">
         <ul className="space-y-2">
           {mainLinks.map((item) => (
-            <li
-              key={item.label}
-              className="flex items-center gap-3 hover:bg-violet-100  px-3 py-2 rounded-md cursor-pointer transition"
-            >
-              <span className="text-lg">{item.icon}</span>
-              <span className="hover:text-violet-800 hover:underline">{item.label}</span>
-            </li>
+            <Link key={item.label} href={item.url}>
+              <li className="flex items-center gap-3 hover:bg-violet-100  px-3 py-2 rounded-md cursor-pointer transition"              >
+                <span className="text-lg">{item.icon}</span>
+                <span className="hover:text-violet-800 hover:underline">{item.label}</span>
+              </li>
+            </Link>
           ))}
         </ul>
 
@@ -39,13 +41,12 @@ export default function Sidebar() {
           <h4 className="text-xs font-bold text-gray-500 mb-2 uppercase">Other</h4>
           <ul className="space-y-2">
             {otherLinks.map((item) => (
-              <li
-                key={item.label}
-                className="flex items-center gap-3 hover:bg-violet-100 px-3 py-2 rounded-md cursor-pointer transition"
-              >
-                <span className="text-lg">{item.icon}</span>
-                <span className="hover:text-violet-800 hover:underline">{item.label}</span>
-              </li>
+              <Link key={item.label} href={item.url}>
+                <li className="flex items-center gap-3 hover:bg-violet-100 px-3 py-2 rounded-md cursor-pointer transition" >
+                  <span className="text-lg">{item.icon}</span>
+                  <span className="hover:text-violet-800 hover:underline">{item.label}</span>
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
